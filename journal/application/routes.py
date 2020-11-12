@@ -1,7 +1,7 @@
 from flask import render_template, redirect, url_for
 
 from application import app,db
-from application.models import ToDoList
+from application.models import ToDoList, Users, Entries
 from application.forms import TodoForm
 
 @app.route('/')
