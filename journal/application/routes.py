@@ -10,13 +10,14 @@ def login():
     if form.validate_on_submit():
         if len(Users.query.get(form.login.data)) > 1:
             ID = Users.query.filter_by(user_name=form.login.data).first()
-            return redirect(url_for('index', ID.id )
         else:
             add_user = Users(user_name=form.login.data)
             db.session.add(add_user)
             db.session.commit()
             ID = Users.query.filter_by(user_name=form.login.data).first()
-            return redirect(url_for('index', ID.id))
+        return redirect(url_for('index', ID.id))
+            
+        
     return render_template('login.html')
 
 
