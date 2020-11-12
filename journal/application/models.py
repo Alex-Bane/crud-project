@@ -11,7 +11,7 @@ class Users(db.Model):
 	
 	
 class Entries(db.Model):
-	id = db.Column(db.Integer, primary_key=True)
+	entry_id = db.Column(db.Integer, primary_key=True)
 	entry = db.Column(db.String(1000), nullable=False)
 	fk_user_id = db.Column('id', db.Integer, db.ForeignKey('Users.user_id'))
 	fk_user_name = db.Column('user_name', db.String(30), db.ForeignKey('Users.user_name'))
