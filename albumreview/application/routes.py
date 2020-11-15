@@ -6,8 +6,8 @@ from application.forms import ReviewForm
 @app.route('/')
 def index():
     albums = Albums.query.all()
-    reviews = Review.query.all()
-    return render_template('index.html', reviews=reviews, albums=albums)
+    reviews =  Review.query.all()
+    return render_template('index.html', reviews= reviews, albums=albums)
 
 @app.route('/add', methods=['GET', 'POST'])
 def add():
@@ -18,7 +18,7 @@ def add():
         album_choices.append((str(album.id), album.album))
     form.albumid.choices = album_choices
     if form.validate_on_submit():
-        new_review = Review(review=form.review.data, game_id=form.albumid.data,rating=form.rating.data)
+        new_review = Review(review=form.review.data, album_id=form.albumid.data,rating=form.rating.data)
         db.session.add(new_review)
         db.session.commit()
         return redirect(url_for('index'))
@@ -27,7 +27,7 @@ def add():
 @app.route('/update/<int:review_id>', methods=['GET', 'POST'])
 def update(review_id):
     form = ReviewForm()
-    albums = Albumss.query.all()
+    albums = Albums.query.all()
     album_choices = []
     for album in albums:
         album_choices.append((str(album.id), album.album))

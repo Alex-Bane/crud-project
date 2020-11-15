@@ -7,7 +7,7 @@
 
 <form method='POST' action=''>
 	{{ form.hidden_tag() }}
-	{{ form.gameid.label }} {{ form.gameid }}
+	{{ form.albumid.label }} {{ form.albumid }}
 	{% if form.albumid.errors %}
                 {% for error in form.albumid.errors %}
                         {{ error }}
