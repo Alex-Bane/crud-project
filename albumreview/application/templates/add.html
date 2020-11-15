@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+{% block body_content %}
+
+<h2 style="color:rgb(0, 0, 0);"> <b>Add a Review for an Album</b></h2>
+
+
+
+<form method='POST' action=''>
+	{{ form.hidden_tag() }}
+	{{ form.gameid.label }} {{ form.gameid }}
+	{% if form.albumid.errors %}
+                {% for error in form.albumid.errors %}
+                        {{ error }}
+                {% endfor %}
+        {% endif %}
+
+	{{ form.review.label }} {{ form.review }}
+	{% if form.review.errors %}
+		{% for error in form.review.errors %}
+			{{ error }}
+		{% endfor %}  
+	{% endif %}
+	<br>
+	{{form.rating.label}} {{form.rating}}
+	<br>
+	{%if form.rating.errors %}
+		{%for error in form.rating.errors %}
+			{{error}}
+		{% endfor %}
+	{% endif %}
+	<br>
+	{{ form.submit }}
+</form>
+
+{% endblock body_content %}

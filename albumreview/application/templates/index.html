@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% block body_content %}
+
+
+{% for review in reviews %}
+{{ review.albums.album }}
+{{ review.review }}
+
+
+<br>
+ 
+<form action='{{ url_for('update', review_id=review.id)}}'>
+	<button style="color:silver;">Update</button>
+</form>
+<form action='{{ url_for('delete', review_id=review.id)}}'>
+	<button style="color:silver;">Delete</button>
+</form>
+<br><br>
+
+{% endfor %}
+{% endblock body_content %}

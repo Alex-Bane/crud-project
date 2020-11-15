@@ -1,0 +1,16 @@
+<html>
+	<body>
+		<h1 style="color:rgb(0, 0, 0);"><b>Album Reviews</b></h1>
+		<a href='{{ url_for('index') }}'><b>Reviews</b></a>
+		<a href='{{ url_for('add') }}'><b>Add</b></a>
+		
+		<br><br>	
+		
+		{% block body_content %}
+		{% endblock body_content %}
+	</body>
+
+
+
+
+</html>
