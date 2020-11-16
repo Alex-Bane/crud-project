@@ -48,7 +48,7 @@ Below is my plan for my ERD. This database will be hosted on a Google Cloud Plat
 
 # CI Pipeline
 The CI Pipeline used for the development can be seen below
-![CI Pipeline](https://i.imgur.com/Ob3fgGv.png)
+![CI Pipeline](https://i.imgur.com/vGqE0zW.png)
 
 # Project Trackng
 For the project I used GitHubs inbuilt project tracker as a planning tool, as well as to host my user stories. Below is a screenshot of my project board
