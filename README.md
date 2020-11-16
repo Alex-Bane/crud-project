@@ -43,6 +43,7 @@ My project is all about users reviewing albums for others to read. This meant th
 
 ## Plan
 Below is my plan for my ERD. This database will be hosted on a Google Cloud Platform SQL instance using MySQL. This will allow the user to create, read, update and delete reviews. These tables have a one to many relationship, as albums are allowed multiple reviews, however not every album wants the review.
+
 ![ERD](https://i.imgur.com/gV9vsv7.png)
 
 # CI Pipeline
