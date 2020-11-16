@@ -1,24 +1,18 @@
 from application import db
-from application.models import Games 
+from application.models import Albums 
 
 
 db.drop_all()
 db.create_all()
 
-new_game = Games(game = "CSGO: ")
-db.session.add(new_game)
-new_game = Games(game = "OSU: ")
-db.session.add(new_game)
-new_game = Games(game = "Fallout 76: ")
-db.session.add(new_game)
-new_game = Games(game = "NieR:Automata: ")
-db.session.add(new_game)
-new_game = Games(game = "GTA V: ")
-db.session.add(new_game)
-new_game = Games(game = "DOOM: ")
-db.session.add(new_game)
-new_game = Games(game = "GTFO: ")
-db.session.add(new_game)
-new_game = Games(game = "Raft: ")
-db.session.add(new_game)
+new_album = Albums(album = "IGOR", artist= "Tyler, The Creator", genre = "Hip-Hop")
+db.session.add(new_album)
+new_album = Albums(album = "thank u, next", artist= "Ariana Grande", genre = "Pop")
+db.session.add(new_album)
+new_album = Albums(album = "Soy Pablo", artist = "Boy Pablo", genre = "Indie")
+db.session.add(new_album)
+new_album = Albums(album = "Kids See Ghosts", artist = "Kids See Ghosts", genre = "Hip-Hop")
+db.session.add(new_album)
+new_album = Albums(album = "Hold Your Colour", artist = "Pendulum", genre = "Drum and Bass")
+db.session.add(new_album)
 db.session.commit()
