@@ -62,7 +62,7 @@ Testing of this app was done using pytest. When checking the coverage, it seemed
 This app was deployed for testing with use in Jenkins, a CI Server. Jenkins was installed onto a GCP instance, which allowed me to login and test the app using the inbuilt testing features.
 ![Jenkins](https://i.imgur.com/hTOpNro.png)
 The app was also deployed via Gunicorn, this takes it out of development and puts it into a real, user ready production environment.
-
+![Gunicorn](https://i.imgur.com/GBhk1cE.png)
 # Risk Asessment
 I have thought of different risks for my risk assessment, as shown below. I made a matrix that identified risks, mitigators and what the objective of the mitigator was, along with a likelihood and impact of the risk based on how it would affect the app or user.
 ![Risk Asessment](https://i.imgur.com/pmlH8ND.png)
