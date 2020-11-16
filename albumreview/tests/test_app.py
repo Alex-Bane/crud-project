@@ -43,11 +43,11 @@ class TestViews(TestBase):
    
     def test_update_noid(self):
         response = self.clinet.get(url_for('update', review_id=2))
-        self.assertEqual(response.status_code,404)
+        self.assertEqual(response.status_code,500)
     
     def test_delete_noid(self):
         response = self.clinet.get(url_for('delete', review_id=2))
-        self.assertEqual(response.status_code,404)
+        self.assertEqual(response.status_code,500)
         
 
 
