@@ -11,3 +11,6 @@
 
 # CI Pipeline
 ![CI Pipeline](https://i.imgur.com/tqi90Dv.png)
+
+# Test Coverage
+![Test Cov](https://i.imgur.com/FXoifBg.png)
